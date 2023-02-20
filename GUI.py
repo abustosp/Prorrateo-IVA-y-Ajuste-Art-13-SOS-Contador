@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import tkinter as tk
 import tkinter.ttk as ttk
-import LIB.Ajuste_Art_13 as Ajuste_Art_13 , LIB.Ajuste_Art_13_csv as Ajuste_Art_13_csv , LIB.Prorrateo_mensual_xls as Prorrateo_mensual , LIB.Prorrateo_mensual_csv as Prorrateo_mensual_csv
+import LIB.Ajuste_Art_13_xls as Ajuste_Art_13_xls , LIB.Ajuste_Art_13_csv as Ajuste_Art_13_csv , LIB.Prorrateo_mensual_xls as Prorrateo_mensual_xls , LIB.Prorrateo_mensual_csv as Prorrateo_mensual_csv
 
 class App_Prorrateo_Art13:
     def __init__(self, master=None):
@@ -40,16 +40,16 @@ class App_Prorrateo_Art13:
             text='por Agustín Bustos Piasentini\nhttps://www.Agustin-Bustos-Piasentini.com.ar/')
         Label_2.pack(expand="true", side="top")
         self.Mensual_XLS = ttk.Button(Toplevel_1)
-        self.Mensual_XLS.configure(text='Prorrateo Menusual XLS')
+        self.Mensual_XLS.configure(text='Prorrateo Mensual XLS' , command=Prorrateo_mensual_xls.Prorrateo_Mensual_XLS)
         self.Mensual_XLS.pack(expand="true", pady=4, side="top")
         self.Mensual_CSV = ttk.Button(Toplevel_1)
-        self.Mensual_CSV.configure(text='Prorrateo Mensual CSV')
+        self.Mensual_CSV.configure(text='Prorrateo Mensual CSV' , command=Prorrateo_mensual_csv.Prorrateo_Mensual_CSV)
         self.Mensual_CSV.pack(expand="true", padx=0, pady=4, side="top")
         self.Anual_XLS = ttk.Button(Toplevel_1)
-        self.Anual_XLS.configure(text='Prorrateo Anual + Ajuste Art 13 XLS')
+        self.Anual_XLS.configure(text='Prorrateo Anual + Ajuste Art 13 XLS' , command=Ajuste_Art_13_xls.Ajuste_Art13_XLS)
         self.Anual_XLS.pack(expand="true", pady=4, side="top")
         self.Anual_CSV = ttk.Button(Toplevel_1)
-        self.Anual_CSV.configure(text='Prorrateo Anual + Ajuste Art 13 CSV')
+        self.Anual_CSV.configure(text='Prorrateo Anual + Ajuste Art 13 CSV' , command=Ajuste_Art_13_csv.Ajuste_Art13_CSV)
         self.Anual_CSV.pack(expand="true", pady=4, side="top")
 
         # Main widget
