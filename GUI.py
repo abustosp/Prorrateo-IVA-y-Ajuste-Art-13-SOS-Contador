@@ -12,13 +12,13 @@ class App_Prorrateo_Art13:
             cursor="arrow",
             height=250,
             width=325)
-        Toplevel_1.iconbitmap("LIB/ABP-blanco-en-fondo-negro.ico")
+        Toplevel_1.iconbitmap("LIB/BIN/ABP-blanco-en-fondo-negro.ico")
         Toplevel_1.minsize(325, 250)
         Toplevel_1.overrideredirect("False")
         Toplevel_1.title("Prorrateo y Ajuste de Art 13 ")
         Label_3 = ttk.Label(Toplevel_1)
         self.img_ABPblancoenfondonegro111 = tk.PhotoImage(
-            file="LIB/ABP blanco en fondo negro111.png")
+            file="LIB/BIN/ABP blanco en fondo negro111.png")
         Label_3.configure(
             background="#2e2e2e",
             image=self.img_ABPblancoenfondonegro111)
